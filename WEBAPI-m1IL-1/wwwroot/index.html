@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajout d'annonce</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #eef1f5;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+            button.secondary {
+                background-color: #007bff;
+            }
+
+        .token-display {
+            font-size: 12px;
+            color: green;
+            word-break: break-word;
+            margin-top: 10px;
+        }
+
+        .message {
+            margin-top: 10px;
+            color: red;
+        }
+
+        .success {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Connexion</h2>
+        <input type="text" id="loginUsername" placeholder="Nom d'utilisateur">
+        <input type="password" id="loginPassword" placeholder="Mot de passe">
+        <button onclick="login()">Se connecter</button>
+        <div class="token-display" id="tokenDisplay"></div>
+
+        <hr>
+
+        <h2>Ajouter une annonce</h2>
+        <input type="text" id="title" placeholder="Titre">
+        <textarea id="description" placeholder="Description"></textarea>
+        <input type="number" id="price" placeholder="Prix (€)">
+        <input type="text" id="category" placeholder="Catégorie">
+        <input type="text" id="location" placeholder="Localisation">
+        <button onclick="addAd()">Ajouter l'annonce</button>
+        <hr>
+        <h2>Annonces existantes</h2>
+        <div id="adsList"></div>
+
+        <div class="message" id="message"></div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
